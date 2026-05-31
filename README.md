@@ -25,18 +25,49 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **Procedure**
 
+Step 1: Start the program and declare the inputs, outputs, clock, and reset signals for the SISO shift register.
+
+Step 2: Write the Verilog module using flip-flops to shift the input data serially on every clock pulse.
+
+Step 3: Apply different serial input bits and provide clock pulses to perform the shifting operation.
+
+Step 4: Simulate the design in Quartus/ModelSim and verify the serial output using the functional table and waveform.
 
 
 **PROGRAM**
+```
+module Exp10(clk,clear,si,so);
+input clk,si,clear;
+output so;
+reg so;
+reg [3:0] tmp;
+always @(posedge clk )
+begin
+if (clear)
+tmp <= 4'b0000;
+else
+tmp <= tmp << 1;
+tmp[0] <= si;
+so = tmp[3];
+end
+endmodule
 
-
-
-Developed by: RegisterNumber:
-
-
+```
+```
+Developed by: Sngeeth M
+RegisterNumber:212225100043
+```
 
 **RTL LOGIC FOR SISO Shift Register**
 
+<img width="1289" height="750" alt="Screenshot 2026-06-01 001943" src="https://github.com/user-attachments/assets/438c3c9b-bd2e-47af-b296-96ba6bcfb05e" />
+
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+<img width="1920" height="361" alt="Screenshot 2026-06-01 002021" src="https://github.com/user-attachments/assets/9141d0eb-0229-4461-b4cc-534ecb79e096" />
+
+
 **RESULTS**
+
+This Verilog code implements a 4-bit left shift register with serial input si, serial output so, and synchronous clear control.

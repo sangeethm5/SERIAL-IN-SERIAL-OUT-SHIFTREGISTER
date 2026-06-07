@@ -65,7 +65,8 @@ RegisterNumber:212225100043
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 
-<img width="1920" height="361" alt="Screenshot 2026-06-01 002021" src="https://github.com/user-attachments/assets/9141d0eb-0229-4461-b4cc-534ecb79e096" />
+
+<img width="1900" height="320" alt="Screenshot 2026-06-07 221926" src="https://github.com/user-attachments/assets/0e5bb599-c133-4043-8c8a-e9f8d9a1a873" />
 
 
 **RESULTS**
